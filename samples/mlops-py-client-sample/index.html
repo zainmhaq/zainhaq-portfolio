@@ -441,7 +441,7 @@
 </span></code></pre></div>
 </li>
 <li>
-<p>The following example demonstrates how to scale down to 0 replicas so that no hardware resources are used by the deployment. When completely scaled down, replicas will always display -1.</p>
+<p>The following example demonstrates how to scale down to zero replicas so that no hardware resources are used by the deployment. When completely scaled down, the replicas value in the <code>kubernetes_options</code> object is always reported as <code>-1</code>.</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">deployment</span><span class="o">.</span><span class="n">update_kubernetes_options</span><span class="p">(</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    <span class="n">replicas</span><span class="o">=</span><span class="mi">0</span>
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="p">)</span>
@@ -457,7 +457,7 @@
 </span></code></pre></div>
 </li>
 <li>
-<p>Confirm that the update is complete by checking if the deployment is "healthy" (note that a deployment scaled down to 0 replicas is still considered "healthy"). Then for demonstration purposes, try connecting to one of the deployment endpoints using the <code>get_capabilities</code> method. This returns an HTTP error as the deployment is now completely scaled down.</p>
+<p>Confirm that the update is complete by checking if the deployment is healthy. A deployment is considered healthy if it has no errors, even when scaled down to zero replicas. Then, for demonstration purposes, use the <code>get_capabilities</code> method to attempt connecting to one of the deployment endpoints. Because the deployment is scaled down to zero replicas, this returns an HTTP error.</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">while</span> <span class="ow">not</span> <span class="n">deployment</span><span class="o">.</span><span class="n">is_healthy</span><span class="p">():</span>
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>    <span class="n">deployment</span><span class="o">.</span><span class="n">raise_for_failure</span><span class="p">()</span>
 </span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>

@@ -1,0 +1,55 @@
+site_name: "Zain Haq – Technical Writing Portfolio"
+
+theme:
+  name: material
+
+  # Enable the palette toggle feature
+  features:
+    - palette.toggle
+
+  # Define multiple palettes
+  palette:
+    - scheme: default          # Light mode
+      primary: blue
+      accent: pink
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+
+    - scheme: slate            # Dark mode
+      primary: blue
+      accent: pink
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+
+plugins:
+  - search:
+      enabled: false
+markdown_extensions:
+  - admonition
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.details
+  - pymdownx.snippets
+  - pymdownx.superfences
+
+nav:
+  - Home: index.md
+  - Samples:
+      - "Architecture Sample": samples/architecture-sample.md
+      - "Migration Guide Sample": samples/migration-guide-sample.md
+      - "MLOps Python Client Sample": samples/mlops-py-client-sample.md
+      - "Release Blog Sample": samples/release-blog-sample.md

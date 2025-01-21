@@ -1198,10 +1198,9 @@ VPA allows dynamic scaling of CPU and memory resources based on application usag
 <p>MLflow runtimes support Python 3.8 and later starting with MLOps version 0.67.0.</p>
 </li>
 </ul>
-<p>For more information on scoring runtimes in H2O MLOps, see <a href="/deployments/scoring-runtimes.md">Scoring runtimes</a>.</p>
 <h3 id="python-client">Python client</h3>
 <p>Starting with version 0.67.0, the official Python client of H2O MLOps is <a href="https://pypi.org/project/h2o-mlops/"><code>h2o-mlops</code></a>. The minimum Python version required for the client is Python 3.9.</p>
-<p>Built on top of the legacy Python client, <code>h2o-mlops</code> retains all previous functionalities. You can continue to access the legacy client's features through <code>h2o-mlops</code> as needed. For more information, see <a href="./py-client/tutorials/backend.md">Python client tutorials - Backend</a>.</p>
+<p>Built on top of the legacy Python client, <code>h2o-mlops</code> retains all previous functionalities. You can continue to access the legacy client's features through <code>h2o-mlops</code> as needed.</p>
 <p>Note that users of the legacy client can switch to the new Python client (<code>h2o-mlops</code>) by importing <code>h2o-mlops</code> before using any features of the legacy client. This switch can be made without needing to modify any existing code or import statements.</p>
 <h3 id="removal-of-conda-from-wave-app">Removal of Conda from Wave app</h3>
 <p>With the removal of Conda as of MLOps version 0.67.0, third-party models can no longer be uploaded to the MLOps frontend using serialized Pickle files. However, you can still upload models from frameworks like scikit-learn, PyTorch, XGBoost, LightGBM, and TensorFlow using MLflow packaged files.</p>

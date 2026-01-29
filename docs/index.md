@@ -1,6 +1,6 @@
 # Welcome to My Technical Writing Portfolio
 
-Hey! I'm Zain Haq, a senior technical writer with a passion for translating complex technical concepts into clear and actionable documentation. Over the past several years, I've specialized in:
+Hi! I'm Zain Haq, a senior technical writer with a passion for translating complex technical concepts into clear and actionable documentation. Over the past several years, I've specialized in:
 
 - **Cloud-native** and **distributed systems**  
 - **Data science** and **machine learning** tooling  

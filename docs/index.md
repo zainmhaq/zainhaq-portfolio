@@ -8,11 +8,10 @@ I'm Zain Haq—Seattle-based senior technical writer focused on API and develope
 - Frontend & tooling: Python, React, HTML/CSS, Figma; UX copy and component reviews
 - Collaboration: product, engineering, solutions architecture, marketing, and partner teams
 
-## Selected samples
-- [Update subresource integrity](samples/update-subresource-integrity.md)
-- [API authentication guide](samples/api-authentication.md)
-- [Migration guide](samples/migration-guide-sample.md)
-- [Understand vector databases](samples/understand-vector-databases.md)
+## Download selected writing samples (PDF)
+- [Update subresource integrity](assets/zainhaq-update-subresource-integrity.pdf)
+- [API authentication guide](assets/zainhaq-api-authentication.pdf)
+- [Understand vector databases](assets/zainhaq-understand-vector-databases.pdf)
 
 ## Contact
 [LinkedIn](https://www.linkedin.com/in/zain-haq/) · [Website](https://zainmhaq.com) · zain.m.haq@gmail.com

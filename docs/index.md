@@ -9,10 +9,10 @@ I'm Zain Haq—Seattle-based senior technical writer focused on API and develope
 - Collaboration: product, engineering, solutions architecture, marketing, and partner teams
 
 ## Selected samples
-- [Cloud Platform Architecture](samples/architecture-sample.md)  
-- [Migration Guide](samples/migration-guide-sample.md)  
-- [MLOps Python Client](samples/mlops-py-client-sample.md)  
-- [Release Blog](samples/release-blog-sample.md)
+- [Update subresource integrity](samples/update-subresource-integrity.md)
+- [API authentication guide](samples/api-authentication.md)
+- [Migration guide](samples/migration-guide-sample.md)
+- [Understand vector databases](samples/understand-vector-databases.md)
 
 ## Contact
 [LinkedIn](https://www.linkedin.com/in/zain-haq/) · [Website](https://zainmhaq.com) · zain.m.haq@gmail.com

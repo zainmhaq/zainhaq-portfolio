@@ -24,7 +24,7 @@ For more information, see the [Installation section of the VPA GitHub README](ht
 
 ### Removal of HT runtime based on Python 3.8
 
-The Hydrogen Torch (HT) runtime based on Python 3.8, which was available by default in MLOps version 0.67.x, has been removed as of MLOps version 0.68.0. However, you can still use this runtime by registering it through extra runtimes.
+The Torch-based (HT) runtime built on Python 3.8, which was available by default in MLOps version 0.67.x, has been removed as of MLOps version 0.68.0. However, you can still use this runtime by registering it through extra runtimes.
 
 The following requirements need to be met so that the runtime registered through extra runtimes is also visible in the UI:
 
@@ -33,7 +33,7 @@ The following requirements need to be met so that the runtime registered through
 
 ### Configure maximum number of Kubernetes replicas
 
-With H2O MLOps v0.68.0, you can configure the maximum number of [Kubernetes replicas](https://kubernetes.io/docs/reference/glossary/?fundamental=true#term-replica) that can be specified when creating a new deployment. To do this, update `maxDeploymentReplicas` in the `values.yaml` file (`charts/mlops/values.yaml`). By default, the `maxDeploymentReplicas` value is set to 5.
+With MLOps v0.68.0, you can configure the maximum number of [Kubernetes replicas](https://kubernetes.io/docs/reference/glossary/?fundamental=true#term-replica) that can be specified when creating a new deployment. To do this, update `maxDeploymentReplicas` in the `values.yaml` file (`charts/mlops/values.yaml`). By default, the `maxDeploymentReplicas` value is set to 5.
 
 ### Removal of MLflow runtimes based on Python 3.8
 
@@ -115,7 +115,7 @@ As of version 0.68.0, the default security option for deployment is `PASSPHRASE_
 
 ### Cloud migration information: MLOps storage
 
-Starting with version 0.68.0, H2O MLOps will no longer support PVCs for storage, transitioning instead to cloud blob storage. MLOps storage will support blob storage from all three major cloud providers—AWS, Azure, and GCP—as well as Minio for on-premises installations. Consequently, all existing data must be migrated from PVC to blob storage during the upgrade to MLOps 0.68.0. All the data migrations steps will be taken care of by MLOps when MLOps storage is deployed in the MIGRATE mode and no manual user intervention is needed. End users shouldn't experience any down time or data loss while the migration is in progress.
+Starting with version 0.68.0, the MLOps platform will no longer support PVCs for storage, transitioning instead to cloud blob storage. MLOps storage will support blob storage from all three major cloud providers—AWS, Azure, and GCP—as well as Minio for on-premises installations. Consequently, all existing data must be migrated from PVC to blob storage during the upgrade to MLOps 0.68.0. All the data migrations steps will be taken care of by MLOps when MLOps storage is deployed in the MIGRATE mode and no manual user intervention is needed. End users shouldn't experience any down time or data loss while the migration is in progress.
 
 #### Installation instructions
 
@@ -246,7 +246,7 @@ storage:
 
 The Java MOJO Runtime will be removed in the 0.69.0 MLOps release. Version 0.68.0 will be the last release to include the Java MOJO Runtime.
 
-Users are advised to migrate to the C++ MOJO Runtime, which is a 1:1 mapping of the Java runtime that accepts a wider range of algorithms Driverless AI may use that the Java runtime does not support, including BERT, GrowNet, and TensorFlow models.
+Users are advised to migrate to the C++ MOJO Runtime, which is a 1:1 mapping of the Java runtime that accepts a wider range of algorithms the AutoML system may use that the Java runtime does not support, including BERT, GrowNet, and TensorFlow models.
 
 ### Scoring runtimes
 
@@ -256,15 +256,15 @@ Users are advised to migrate to the C++ MOJO Runtime, which is a 1:1 mapping of 
 
 - MLflow runtimes support Python 3.8 and later starting with MLOps version 0.67.0.
 
-For more information on scoring runtimes in H2O MLOps, see [Scoring runtimes](/deployments/scoring-runtimes.md).
+For more information on scoring runtimes in the MLOps platform, see [Scoring runtimes](/deployments/scoring-runtimes.md).
 
 ### Python client
 
-Starting with version 0.67.0, the official Python client of H2O MLOps is [`h2o-mlops`](https://pypi.org/project/h2o-mlops/). The minimum Python version required for the client is Python 3.9.
+Starting with version 0.67.0, the official Python client of the MLOps platform is `mlops-python-client`. The minimum Python version required for the client is Python 3.9.
 
-Built on top of the legacy Python client, `h2o-mlops` retains all previous functionalities. You can continue to access the legacy client's features through `h2o-mlops` as needed. For more information, see [Python client tutorials - Backend](./py-client/tutorials/backend.md).
+Built on top of the legacy Python client, `mlops-python-client` retains all previous functionalities. You can continue to access the legacy client's features through `mlops-python-client` as needed. For more information, see [Python client tutorials - Backend](./py-client/tutorials/backend.md).
 
-Note that users of the legacy client can switch to the new Python client (`h2o-mlops`) by importing `h2o-mlops` before using any features of the legacy client. This switch can be made without needing to modify any existing code or import statements.
+Note that users of the legacy client can switch to the new Python client (`mlops-python-client`) by importing it before using any features of the legacy client. This switch can be made without needing to modify any existing code or import statements.
 
 ### Removal of Conda from Wave app
 
@@ -274,7 +274,7 @@ With the removal of Conda as of MLOps version 0.67.0, third-party models can no 
 
 - Starting with version 0.67.0, per project data retention duration can be set for monitoring data stored on InfluxDB. To enable this feature, set the `MONITOR_INFLUXDB_PER_PROJECT_DATA_RETENTION_PERIOD` env to the deployer with a correct duration string. Minimum retention period is 1h and the max is `INF`. `INF` will be the default If `MONITOR_INFLUXDB_PER_PROJECT_DATA_RETENTION_PERIOD` is not set, `INF` is the default duration.
 
- -`monitor_influxdb_per_project_data_retention_period` is exposed for H2O MLOps helm charts to set the `MONITOR_INFLUXDB_PER_PROJECT_DATA_RETENTION_PERIOD` for deployer.
+ -`monitor_influxdb_per_project_data_retention_period` is exposed for MLOps helm charts to set the `MONITOR_INFLUXDB_PER_PROJECT_DATA_RETENTION_PERIOD` for deployer.
 
 ### Emissary
 

@@ -1,0 +1,1405 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../..">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Migration Guide Sample - Zain Haq – Technical Writing Portfolio</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="pink">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#migration-guide-writing-sample" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Zain Haq – Technical Writing Portfolio" class="md-header__button md-logo" aria-label="Zain Haq – Technical Writing Portfolio" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Zain Haq – Technical Writing Portfolio
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Migration Guide Sample
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="pink"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="pink"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Zain Haq – Technical Writing Portfolio" class="md-nav__button md-logo" aria-label="Zain Haq – Technical Writing Portfolio" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Zain Haq – Technical Writing Portfolio
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Samples
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Samples
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architecture-sample.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture Sample
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Migration Guide Sample
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Migration Guide Sample
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#from-067x-to-0680" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        From 0.67.x to 0.68.0
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="From 0.67.x to 0.68.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#optional-vertical-pod-autoscaler-vpa-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        (Optional) Vertical Pod Autoscaler (VPA) support
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="(Optional) Vertical Pod Autoscaler (VPA) support">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key changes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removal-of-ht-runtime-based-on-python-38" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Removal of HT runtime based on Python 3.8
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-maximum-number-of-kubernetes-replicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configure maximum number of Kubernetes replicas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removal-of-mlflow-runtimes-based-on-python-38" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Removal of MLflow runtimes based on Python 3.8
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pickle-runtime-based-on-python-312" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pickle runtime based on Python 3.12
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scheduler-routine-for-mlops-telemetry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scheduler routine for MLOps Telemetry
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restructured-environment-security-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Restructured environment security options
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#helm-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Helm changes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#default-deployment-security-option" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Default deployment security option
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cloud-migration-information-mlops-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cloud migration information: MLOps storage
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cloud migration information: MLOps storage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation-instructions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation instructions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation instructions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deploy-storage-in-migrate-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deploy storage in MIGRATE mode
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Deploy storage in MIGRATE mode">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-aws-environments-with-s3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        For AWS environments with S3
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-gcp-environments-with-google-cloud-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        For GCP environments with Google Cloud Storage
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-azure-environments-with-azure-blob-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        For Azure environments with Azure Blob Storage
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-on-premise-environments-with-minio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        For on-premise environments with Minio
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#from-0661-to-0670" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        From 0.66.1 to 0.67.0
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="From 0.66.1 to 0.67.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#announcement-upcoming-java-mojo-runtime-removal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Announcement: Upcoming Java MOJO Runtime removal
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scoring-runtimes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scoring runtimes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python-client" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Python client
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removal-of-conda-from-wave-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Removal of Conda from Wave app
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monitoring-data-retention" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Monitoring data retention
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emissary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Emissary
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Other changes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mlops-py-client-sample.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MLOps Python Client Sample
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../release-blog-sample.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Release Blog Sample
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#from-067x-to-0680" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        From 0.67.x to 0.68.0
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="From 0.67.x to 0.68.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#optional-vertical-pod-autoscaler-vpa-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        (Optional) Vertical Pod Autoscaler (VPA) support
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="(Optional) Vertical Pod Autoscaler (VPA) support">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key changes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removal-of-ht-runtime-based-on-python-38" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Removal of HT runtime based on Python 3.8
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-maximum-number-of-kubernetes-replicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configure maximum number of Kubernetes replicas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removal-of-mlflow-runtimes-based-on-python-38" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Removal of MLflow runtimes based on Python 3.8
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pickle-runtime-based-on-python-312" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pickle runtime based on Python 3.12
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scheduler-routine-for-mlops-telemetry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scheduler routine for MLOps Telemetry
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restructured-environment-security-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Restructured environment security options
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#helm-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Helm changes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#default-deployment-security-option" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Default deployment security option
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cloud-migration-information-mlops-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cloud migration information: MLOps storage
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cloud migration information: MLOps storage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation-instructions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation instructions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation instructions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deploy-storage-in-migrate-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deploy storage in MIGRATE mode
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Deploy storage in MIGRATE mode">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-aws-environments-with-s3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        For AWS environments with S3
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-gcp-environments-with-google-cloud-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        For GCP environments with Google Cloud Storage
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-azure-environments-with-azure-blob-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        For Azure environments with Azure Blob Storage
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-on-premise-environments-with-minio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        For on-premise environments with Minio
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#from-0661-to-0670" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        From 0.66.1 to 0.67.0
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="From 0.66.1 to 0.67.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#announcement-upcoming-java-mojo-runtime-removal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Announcement: Upcoming Java MOJO Runtime removal
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scoring-runtimes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scoring runtimes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python-client" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Python client
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removal-of-conda-from-wave-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Removal of Conda from Wave app
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monitoring-data-retention" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Monitoring data retention
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emissary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Emissary
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Other changes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="migration-guide-writing-sample">Migration Guide Writing Sample</h1>
+<h2 id="from-067x-to-0680">From 0.67.x to 0.68.0</h2>
+<h3 id="optional-vertical-pod-autoscaler-vpa-support">(Optional) Vertical Pod Autoscaler (VPA) support</h3>
+<p>MLOps version 0.68.0 introduces Vertical Pod Autoscaler (VPA) support for the Deployer. Note that VPA activation is optional and performed upon request.
+VPA allows dynamic scaling of CPU and memory resources based on application usage, improving resource efficiency and optimizing costs.</p>
+<p>If the VPA is activated in MLOps, then VPA is supported in the cluster and the VPA CRDs and controllers are up and running alongside the Metrics Server.</p>
+<p>For more information, see the <a href="https://github.com/kubernetes/autoscaler/tree/master/vertical-pod-autoscaler#installation">Installation section of the VPA GitHub README</a> and the <a href="https://github.com/kubernetes-sigs/metrics-server?tab=readme-ov-file#installation">Metrics Server installation instructions</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For a list of known limitations, see the <a href="https://github.com/kubernetes/autoscaler/tree/master/vertical-pod-autoscaler#known-limitations">Known limitations section of the VPA GitHub README</a>.</p>
+</div>
+<h5 id="key-changes">Key changes</h5>
+<ul>
+<li>VPA Resource Specifications: Added VPA resource specification logic to the Scoring Apps and App Composer, allowing for the dynamic adjustment of their resource limits based on real-time demand.</li>
+<li>API Updates: New API logic has been added for specifying and validating VPA resources.</li>
+<li>New VPA Utility Functions: Implemented utility methods for creating and managing VPA resources, including validation and resource quantity handling.</li>
+<li>Deprecated Function Removal: Removed the deprecated Fabric8 createOrReplace usage in the Scoring Apps.</li>
+</ul>
+<h3 id="removal-of-ht-runtime-based-on-python-38">Removal of HT runtime based on Python 3.8</h3>
+<p>The Torch-based (HT) runtime built on Python 3.8, which was available by default in MLOps version 0.67.x, has been removed as of MLOps version 0.68.0. However, you can still use this runtime by registering it through extra runtimes.</p>
+<p>The following requirements need to be met so that the runtime registered through extra runtimes is also visible in the UI:</p>
+<ul>
+<li>The <code>mlflow/flavors/python_function/loader_module</code> must match <code>mlflow.pyfunc.model</code>.</li>
+<li>The runtime name must adhere to this pattern: <code>(python-scorer_hydrogen_torch_)(\w*)(38)(\w*)</code>.</li>
+</ul>
+<h3 id="configure-maximum-number-of-kubernetes-replicas">Configure maximum number of Kubernetes replicas</h3>
+<p>With MLOps v0.68.0, you can configure the maximum number of <a href="https://kubernetes.io/docs/reference/glossary/?fundamental=true#term-replica">Kubernetes replicas</a> that can be specified when creating a new deployment. To do this, update <code>maxDeploymentReplicas</code> in the <code>values.yaml</code> file (<code>charts/mlops/values.yaml</code>). By default, the <code>maxDeploymentReplicas</code> value is set to 5.</p>
+<h3 id="removal-of-mlflow-runtimes-based-on-python-38">Removal of MLflow runtimes based on Python 3.8</h3>
+<p>MLflow runtimes based on Python 3.8 have been removed in MLOps version 0.68.0. Python 3.8 has officially reached end of life as of October 07, 2024.</p>
+<h3 id="pickle-runtime-based-on-python-312">Pickle runtime based on Python 3.12</h3>
+<p>MLOps version 0.68.0 introduces a pickle runtime using Python 3.12. Choose one of the following options:</p>
+<ul>
+<li>
+<p>Update your models to work with Python 3.12.</p>
+</li>
+<li>
+<p>If you cannot update your models, the original pickle runtime based on Python 3.8.18 can be configured during MLOps installation by replacing the <code>pickle-3.12.7</code> image with <code>pickle-3.8.18</code>.</p>
+</li>
+</ul>
+<h3 id="scheduler-routine-for-mlops-telemetry">Scheduler routine for MLOps Telemetry</h3>
+<p>MLOps version 0.68.0 introduces the <code>SCHEDULER_INTERVAL_SECONDS</code> env variable to run scheduler routine inside the application itself, replacing the use of a cron job. As a result, MLOps Telemetry is deployed as a long-running deployment in the K8s cluster that publishes event data at scheduled intervals. The default value is as follows:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>SCHEDULER_INTERVAL_SECONDS=300
+</span></code></pre></div>
+<h3 id="restructured-environment-security-options">Restructured environment security options</h3>
+<p>Environment-related security options are now configured in a different way. Prior to v0.68.0, security options were specified using their corresponding numerical values. For example:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>securityOptions: [1,2,3]
+</span></code></pre></div>
+<p>From v0.68.0 onwards, activated security options are configured in the <code>values.yaml</code> file (<code>charts/mlops/values.yaml</code>) using the security option name. For example:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>securityOptions:
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    activated:
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>        - .......
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>        - &quot;AUTHORIZATION_PROTOCOL_OIDC&quot;
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>        - .......
+</span></code></pre></div>
+<p>You can also set the default security option in the <code>values.yaml</code> file (<code>charts/mlops/values.yaml</code>) using the security option name. The default option serves as the default security setting that will be applied in the UI when creating a deployment and it must be a part of the Activated Security Options List. </p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>securityOptions:
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    activated:
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>        - .......
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>        - &quot;PASSPHRASE_HASH_TYPE_PLAINTEXT&quot;
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>        - .......
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>    default: &quot;PASSPHRASE_HASH_TYPE_PLAINTEXT&quot;
+</span></code></pre></div>
+<p>The following security options are supported in v0.68.0:</p>
+<ul>
+<li><strong>DISABLED</strong>: No security options are activated.</li>
+<li><strong>PASSPHRASE_HASH_TYPE_PLAINTEXT</strong>: Passphrase hash type is plaintext.</li>
+<li><strong>PASSPHRASE_HASH_TYPE_BCRYPT</strong>: Passphrase hash type is bcrypt.</li>
+<li><strong>AUTHORIZATION_PROTOCOL_OIDC</strong>: OIDC authorization protocol is activated.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul>
+<li>The Activated Security Options List can not be empty.</li>
+<li>The default option must be part of the Activated Security Options List.</li>
+</ul>
+</div>
+<p>From v0.68.0 onwards, the way to create a deployment with No Security via API call also differs from previous versions. This change includes the following modifications to the <code>h2o-mlops</code> Python Client:</p>
+<ul>
+<li>
+<p><code>security_options</code> is now a required field for the <code>create_single</code> method of the <code>MLOpsScoringDeployments</code> class.</p>
+</li>
+<li>
+<p>To ensure backward compatibility, v0.68.0 includes a new attribute for the <code>SecurityOptions</code> class, called <code>disabled_security</code>. This attribute allows handling cases with the No Security option by setting it to True, instead of treating None or SecurityOptions() as No Security.</p>
+</li>
+<li>
+<p>Users of MLOps assembly v0.68.0 or above must set <code>disabled_security=True</code> to use the No Security option. For users on older versions, No Security mode can be accessed by using SecurityOptions with default values.</p>
+</li>
+</ul>
+<h3 id="helm-changes">Helm changes</h3>
+<ul>
+<li>As of version 0.68.0, the <code>ENABLE_USER_EXTERNALID_UPDATE</code> environment variable has been removed from storage, as it is no longer necessary.</li>
+<li><code>deploymentEnvironment.corsOrigin</code> has been removed. Use <code>global.cors.allowedOrigin</code> instead.</li>
+</ul>
+<h3 id="default-deployment-security-option">Default deployment security option</h3>
+<p>As of version 0.68.0, the default security option for deployment is <code>PASSPHRASE_HASH_TYPE_PLAINTEXT</code>. Prior to this version, deployments were not secured by default.</p>
+<h3 id="cloud-migration-information-mlops-storage">Cloud migration information: MLOps storage</h3>
+<p>Starting with version 0.68.0, the MLOps platform will no longer support PVCs for storage, transitioning instead to cloud blob storage. MLOps storage will support blob storage from all three major cloud providers—AWS, Azure, and GCP—as well as Minio for on-premises installations. Consequently, all existing data must be migrated from PVC to blob storage during the upgrade to MLOps 0.68.0. All the data migrations steps will be taken care of by MLOps when MLOps storage is deployed in the MIGRATE mode and no manual user intervention is needed. End users shouldn't experience any down time or data loss while the migration is in progress.</p>
+<h4 id="installation-instructions">Installation instructions</h4>
+<h5 id="deploy-storage-in-migrate-mode">Deploy storage in MIGRATE mode</h5>
+<p><strong>Note:</strong> Only follow the instructions in this section if MLOps storage was previously deployed with LOCAL mode using a Kubernetes PVC as the storage.</p>
+<h6 id="for-aws-environments-with-s3">For AWS environments with S3</h6>
+<p>IAM auth is used to access the bucket. Following annotation should be set to the storage service account.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>eks.amazonaws.com/role-arn: &lt;iam-role-arn&gt;
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>storage:
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>  serviceAccount:
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    create: true
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    annotations: {
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>      eks.amazonaws.com/role-arn: &lt;iam-role-arn&gt;
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>    }
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>  persistence:
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>    enabled: true
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>  cloudPersistence: 
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>    enabled: true
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>    url: s3://&lt;bucket-name&gt;?region=&lt;bucket-region&gt;&amp;prefix=&lt;optional-prefix&gt;
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>  pvcMigration:
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>    enabled: true
+</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>    cloudProvider: s3
+</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>    bucketName: &lt;bucket-name&gt;
+</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>    region: &lt;bucket-region&gt;
+</span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>    prefix: &lt;optional-prefix&gt;
+</span></code></pre></div>
+<h6 id="for-gcp-environments-with-google-cloud-storage">For GCP environments with Google Cloud Storage</h6>
+<p>Workload identify is used to access the bucket. The following annotation must be set to the storage service account:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>iam.gke.io/gcp-service-account: &lt;service_account_email&gt;
+</span></code></pre></div>
+<p>Helm values must be set as follows:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>storage:
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>  serviceAccount:
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>    create: true
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>    annotations: {
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>      iam.gke.io/gcp-service-account: &lt;service_account_email&gt;
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>    }
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>  persistence:
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>    enabled: true
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>  cloudPersistence: 
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>    enabled: true
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>    url: gs://&lt;bucket-name&gt;
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>  pvcMigration:
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>    enabled: true
+</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>    cloudProvider: gcs
+</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>    bucketName: &lt;bucket-name&gt;
+</span><span id="__span-7-16"><a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>    region: &lt;bucket-region&gt;
+</span></code></pre></div>
+<h6 id="for-azure-environments-with-azure-blob-storage">For Azure environments with Azure Blob Storage</h6>
+<p>Workload identify is used to access the bucket. The following annotation must be set to the storage service account:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>azure.workload.identity/client-id=&lt;client-id&gt;
+</span></code></pre></div>
+<p>The following label must be set to storage pods (service and migrator job):</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>azure.workload.identity/use=true
+</span></code></pre></div>
+<p>Helm values must be set as follows:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>storage:
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>  serviceAccount:
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>    create: true
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>    annotations: {
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>      azure.workload.identity/client-id=&lt;client-id&gt;
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>    }
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>  extraPodLabels: {
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>    azure.workload.identity/use=true
+</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>  }
+</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>  persistence:
+</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>    enabled: true
+</span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>  cloudPersistence: 
+</span><span id="__span-10-13"><a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a>    enabled: true
+</span><span id="__span-10-14"><a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a>    url: azblob://&lt;bucket-name&gt;
+</span><span id="__span-10-15"><a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a>  pvcMigration:
+</span><span id="__span-10-16"><a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a>    enabled: true
+</span><span id="__span-10-17"><a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a>    cloudProvider: azureblob
+</span><span id="__span-10-18"><a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a>    bucketName: &lt;bucket-name&gt;
+</span><span id="__span-10-19"><a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a>    region: &lt;bucket-region&gt;
+</span><span id="__span-10-20"><a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a>    accountName: &lt;storage-account-name&gt;
+</span></code></pre></div>
+<h6 id="for-on-premise-environments-with-minio">For on-premise environments with Minio</h6>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>storage:
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>  persistence:
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>    enabled: true
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>  cloudPersistence: 
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>    enabled: true
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>    url: s3://&lt;minio-bucket-name&gt;?endpoint=&lt;minio-url&gt;&amp;region=&lt;minio-region&gt;&amp;hostname_immutable=true
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>    access_key_id: &lt;minio-access-key-id&gt;
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>    secret_access_key: &lt;minio-secret-access-key&gt;
+</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>  pvcMigration:
+</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>    enabled: true
+</span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>    cloudProvider: minio
+</span><span id="__span-11-12"><a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>    bucketName: &lt;bucket-name&gt;
+</span><span id="__span-11-13"><a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>    region: &lt;minio-region&gt;
+</span><span id="__span-11-14"><a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a>    endpoint: &lt;minio-url&gt;
+</span><span id="__span-11-15"><a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a>    access_key_id: &lt;minio-access-key-id&gt;
+</span><span id="__span-11-16"><a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a>    secret_access_key: &lt;minio-secret-access-key&gt;
+</span></code></pre></div>
+<h2 id="from-0661-to-0670">From 0.66.1 to 0.67.0</h2>
+<h3 id="announcement-upcoming-java-mojo-runtime-removal">Announcement: Upcoming Java MOJO Runtime removal</h3>
+<p>The Java MOJO Runtime will be removed in the 0.69.0 MLOps release. Version 0.68.0 will be the last release to include the Java MOJO Runtime.</p>
+<p>Users are advised to migrate to the C++ MOJO Runtime, which is a 1:1 mapping of the Java runtime that accepts a wider range of algorithms the AutoML system may use that the Java runtime does not support, including BERT, GrowNet, and TensorFlow models.</p>
+<h3 id="scoring-runtimes">Scoring runtimes</h3>
+<ul>
+<li>
+<p>MLflow Runtimes images are twice as large now. This means that deployments of these run-times can take longer due to longer pulling times.</p>
+</li>
+<li>
+<p>Runtimes for DAI 1.10.4.3 and older are removed as of MLOps version 0.67.0.</p>
+</li>
+<li>
+<p>MLflow runtimes support Python 3.8 and later starting with MLOps version 0.67.0.</p>
+</li>
+</ul>
+<p>For more information on scoring runtimes in the MLOps platform, see <a href="/deployments/scoring-runtimes.md">Scoring runtimes</a>.</p>
+<h3 id="python-client">Python client</h3>
+<p>Starting with version 0.67.0, the official Python client of the MLOps platform is <code>mlops-python-client</code>. The minimum Python version required for the client is Python 3.9.</p>
+<p>Built on top of the legacy Python client, <code>mlops-python-client</code> retains all previous functionalities. You can continue to access the legacy client's features through <code>mlops-python-client</code> as needed. For more information, see <a href="./py-client/tutorials/backend.md">Python client tutorials - Backend</a>.</p>
+<p>Note that users of the legacy client can switch to the new Python client (<code>mlops-python-client</code>) by importing it before using any features of the legacy client. This switch can be made without needing to modify any existing code or import statements.</p>
+<h3 id="removal-of-conda-from-wave-app">Removal of Conda from Wave app</h3>
+<p>With the removal of Conda as of MLOps version 0.67.0, third-party models can no longer be uploaded to the MLOps frontend using serialized Pickle files. However, you can still upload models from frameworks like scikit-learn, PyTorch, XGBoost, LightGBM, and TensorFlow using MLflow packaged files.</p>
+<h3 id="monitoring-data-retention">Monitoring data retention</h3>
+<ul>
+<li>Starting with version 0.67.0, per project data retention duration can be set for monitoring data stored on InfluxDB. To enable this feature, set the <code>MONITOR_INFLUXDB_PER_PROJECT_DATA_RETENTION_PERIOD</code> env to the deployer with a correct duration string. Minimum retention period is 1h and the max is <code>INF</code>. <code>INF</code> will be the default If <code>MONITOR_INFLUXDB_PER_PROJECT_DATA_RETENTION_PERIOD</code> is not set, <code>INF</code> is the default duration.</li>
+</ul>
+<p>-<code>monitor_influxdb_per_project_data_retention_period</code> is exposed for MLOps helm charts to set the <code>MONITOR_INFLUXDB_PER_PROJECT_DATA_RETENTION_PERIOD</code> for deployer.</p>
+<h3 id="emissary">Emissary</h3>
+<p>Switch from emissary to <a href="https://gateway-api.sigs.k8s.io/">gateway-api</a>:</p>
+<div class="language-text highlight"><pre><span></span><code>- Emissary&#39;s CRDs are no longer used.
+- For mapping deployments to http, Gateway API&#39;s HTTPRoute CRD is used.
+- Gateway API implemented with [Envoy Gateway](https://gateway.envoyproxy.io/).
+- (**Breaking change**) Gateway API doesn&#39;t support custom error responses. This means that if a deployment is scaled down, the following custom error body is no longer displayed: `Deployment is scaled down to zero replicas. Please increase the number of replicas to use the deployment.` For more information, see [Custom error responses](https://www.getambassador.io/docs/emissary/latest/topics/running/custom-error-responses).
+- (**Breaking change**) - If a deployment is scaled down, error code **500** is thrown instead of **503**.
+</code></pre></div>
+<h3 id="other-changes">Other changes</h3>
+<ul>
+<li>External model registry is removed as of version 0.67.0.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["palette.toggle"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

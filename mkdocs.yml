@@ -7,21 +7,21 @@ theme:
   features:
     - palette.toggle
 
-  # Define multiple palettes
+  # Define multiple palettes (dark first so it is the default)
   palette:
+    - scheme: slate            # Dark mode (default)
+      primary: blue
+      accent: pink
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
     - scheme: default          # Light mode
       primary: blue
       accent: pink
       toggle:
         icon: material/weather-night
         name: Switch to dark mode
-
-    - scheme: slate            # Dark mode
-      primary: blue
-      accent: pink
-      toggle:
-        icon: material/weather-sunny
-        name: Switch to light mode
 
 markdown_extensions:
   - pymdownx.highlight:

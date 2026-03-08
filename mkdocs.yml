@@ -48,8 +48,3 @@ markdown_extensions:
 
 nav:
   - Home: index.md
-  - Samples:
-      - "Architecture Sample": samples/architecture-sample.md
-      - "Migration Guide Sample": samples/migration-guide-sample.md
-      - "MLOps Python Client Sample": samples/mlops-py-client-sample.md
-      - "Release Blog Sample": samples/release-blog-sample.md

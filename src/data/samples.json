@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Authenticate to the API",
+    "type": "API authentication guide",
+    "audience": "Merchant and agency developers",
+    "description": "Walks developers through generating OAuth 2.0 credentials and exchanging them for an access token, including request examples, response fields, and error codes.",
+    "file": "zainhaq-api-authentication.pdf"
+  },
+  {
+    "title": "Understand vector databases",
+    "type": "Concepts guide",
+    "audience": "Developers and data scientists",
+    "description": "Explains how vector databases store and index high-dimensional data for semantic similarity search, covering vectorization, indexing algorithms, and common use cases like RAG and recommendation systems.",
+    "file": "zainhaq-understand-vector-databases.pdf"
+  },
+  {
+    "title": "Update Subresource Integrity hash values",
+    "type": "How-to guide",
+    "audience": "Merchant and agency developers",
+    "description": "Provides step-by-step instructions for generating and updating SRI hash values in a Salesforce Commerce Cloud cartridge to ensure secure script loading during checkout.",
+    "file": "zainhaq-update-subresource-integrity.pdf"
+  }
+]

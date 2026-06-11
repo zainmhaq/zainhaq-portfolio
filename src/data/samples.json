@@ -1,23 +1,23 @@
 [
   {
-    "title": "Authenticate to the API",
+    "title": "Authenticate to the Atlas Checkout API",
     "type": "API authentication guide",
     "audience": "Merchant and agency developers",
-    "description": "Walks developers through generating OAuth 2.0 credentials and exchanging them for an access token, including request examples, response fields, and error codes.",
-    "file": "zainhaq-api-authentication.pdf"
+    "description": "Describes how to generate API credentials, exchange them for OAuth 2.0 access tokens, and store both securely.",
+    "file": "authenticate-to-the-atlas-checkout-api.pdf"
   },
   {
-    "title": "Understand vector databases",
-    "type": "Concepts guide",
-    "audience": "Developers and data scientists",
-    "description": "Explains how vector databases store and index high-dimensional data for semantic similarity search, covering vectorization, indexing algorithms, and common use cases like RAG and recommendation systems.",
-    "file": "zainhaq-understand-vector-databases.pdf"
+    "title": "Atlas Fulfillment and Atlas Checkout accelerator for Meridian OMS",
+    "type": "Integration reference",
+    "audience": "Enterprise architects and OMS developers",
+    "description": "Describes the architecture, modules, and deployment of a pre-built integration between an enterprise OMS and a commerce and fulfillment platform.",
+    "file": "atlas-fulfillment-accelerator-for-meridian-oms.pdf"
   },
   {
-    "title": "Update Subresource Integrity hash values",
-    "type": "How-to guide",
-    "audience": "Merchant and agency developers",
-    "description": "Provides step-by-step instructions for generating and updating SRI hash values in a Salesforce Commerce Cloud cartridge to ensure secure script loading during checkout.",
-    "file": "zainhaq-update-subresource-integrity.pdf"
+    "title": "Update subresource integrity hash values for scripts in the Atlas Checkout cartridge",
+    "type": "Security how-to guide",
+    "audience": "Storefront developers",
+    "description": "Describes how to regenerate Subresource Integrity (SRI) hash values after changes to checkout cartridge files.",
+    "file": "update-sri-hash-values-atlas-checkout-cartridge.pdf"
   }
 ]

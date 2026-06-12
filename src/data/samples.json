@@ -1,23 +1,23 @@
 [
   {
-    "title": "Authenticate to the Atlas Checkout API",
+    "title": "Authenticate to the Cove API",
     "type": "API authentication guide",
     "audience": "Merchant and agency developers",
     "description": "Describes how to generate API credentials, exchange them for OAuth 2.0 access tokens, and store both securely.",
-    "file": "authenticate-to-the-atlas-checkout-api.pdf"
+    "file": "authenticate-to-the-cove-api.pdf"
   },
   {
-    "title": "Atlas Fulfillment and Atlas Checkout accelerator for Meridian OMS",
+    "title": "Cove Commerce accelerator for Meridian OMS",
     "type": "Integration reference",
     "audience": "Enterprise architects and OMS developers",
     "description": "Describes the architecture, modules, and deployment of a pre-built integration between an enterprise OMS and a commerce and fulfillment platform.",
-    "file": "atlas-fulfillment-accelerator-for-meridian-oms.pdf"
+    "file": "cove-commerce-accelerator-for-meridian-oms.pdf"
   },
   {
-    "title": "Update subresource integrity hash values for scripts in the Atlas Checkout cartridge",
+    "title": "Update subresource integrity hash values for scripts in the Cove cartridge",
     "type": "Security how-to guide",
     "audience": "Storefront developers",
     "description": "Describes how to regenerate Subresource Integrity (SRI) hash values after changes to checkout cartridge files.",
-    "file": "update-sri-hash-values-atlas-checkout-cartridge.pdf"
+    "file": "update-sri-hash-values-cove-cartridge.pdf"
   }
 ]

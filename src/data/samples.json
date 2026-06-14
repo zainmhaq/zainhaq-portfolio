@@ -19,5 +19,12 @@
     "audience": "Storefront developers",
     "description": "Describes how to regenerate Subresource Integrity (SRI) hash values after changes to checkout cartridge files.",
     "file": "update-sri-hash-values-cove-cartridge.pdf"
+  },
+  {
+    "title": "AI-powered documentation quality scoring tool",
+    "type": "Social media post sample",
+    "audience": "Hiring managers, content leads, and technical writing teams",
+    "description": "Explains an AI-powered documentation scoring tool in a concise, public-facing format, with emphasis on content quality, review workflow, and responsible AI use.",
+    "file": "ai-documentation-quality-scoring-tool-social-post.pdf"
   }
 ]

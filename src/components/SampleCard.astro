@@ -1,0 +1,29 @@
+---
+interface Props {
+  href: string;
+  title: string;
+  docType: string;
+  summary: string;
+  audience: string;
+  minutes: number;
+  pdf: string;
+}
+
+const { href, title, docType, summary, audience, minutes, pdf } = Astro.props;
+---
+
+<article class="card">
+  <div class="card-meta">
+    <span class="card-type">{docType}</span>
+    <span class="card-minutes">{minutes} min read</span>
+  </div>
+  <h3 class="card-title"><a href={href} class="card-link">{title}</a></h3>
+  <p class="card-desc">{summary}</p>
+  <div class="card-footer">
+    <span class="card-audience">For {audience.charAt(0).toLowerCase() + audience.slice(1)}</span>
+    <span class="card-actions">
+      <span class="card-read">Read online <span class="card-arrow" aria-hidden="true">&rarr;</span></span>
+      <a href={`/samples/${pdf}`} class="card-pdf" target="_blank" rel="noopener noreferrer">PDF</a>
+    </span>
+  </div>
+</article>

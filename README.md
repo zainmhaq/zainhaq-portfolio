@@ -1,24 +1,34 @@
 # Portfolio — zainmhaq.com
 
-Personal portfolio site built with Astro, deployed to GitHub Pages.
+Personal portfolio site for Zain Haq, technical writer. Built with Astro, deployed to GitHub Pages.
 
-## Swap writing samples
+Writing samples are Markdown files rendered as native HTML pages (docs-as-code), with PDF downloads and machine-readable twins for AI agents (`/llms.txt`, `/llms-full.txt`, and a raw `.md` route per sample).
 
-1. Drop the new PDF into `public/samples/`.
-2. Open `src/data/samples.json` and update the entry (or add a new one):
+## Add or update a writing sample
 
-```json
-{
-  "title": "Your sample title",
-  "type": "API documentation",
-  "audience": "Developers",
-  "description": "A short description of what this sample covers.",
-  "file": "your-filename.pdf"
-}
-```
+1. Create or edit a Markdown file in `src/content/samples/`. The frontmatter drives everything:
 
-3. Remove the old PDF from `public/samples/` if replacing.
-4. Commit and push. The GitHub Action handles the rest.
+   ```yaml
+   ---
+   title: Your sample title
+   summary: One-sentence description shown on cards and in llms.txt.
+   docType: API documentation
+   audience: Developers
+   purpose: What the document does, shown as the page lede.
+   note: Disclosure note (e.g., fictional product names).
+   highlights:
+     - What a reviewer should look for in this sample
+   pdf: your-filename.pdf          # must exist in public/samples/
+   order: 1                        # sort position
+   ---
+
+   Your Markdown content here...
+   ```
+
+2. Drop the matching PDF into `public/samples/`.
+3. Commit and push. The GitHub Action handles the rest.
+
+Each sample automatically gets: an HTML page at `/work/<filename>/`, a raw Markdown route at `/work/<filename>.md`, a card on the home page, and entries in `llms.txt`, `llms-full.txt`, and `sitemap.xml`.
 
 ## Local development
 
@@ -34,8 +44,18 @@ Push to `main`. The GitHub Action at `.github/workflows/deploy.yml` builds and d
 ## Project structure
 
 ```
-public/samples/       <- PDF writing samples go here
-src/data/samples.json <- edit this file to update what appears on the site
-src/pages/index.astro <- main page
-src/styles/global.css <- all styles
+src/content/samples/   <- writing samples (Markdown + frontmatter)
+src/content.config.ts  <- content collection schema
+src/pages/index.astro  <- home page
+src/pages/work/        <- sample page template + raw Markdown route
+src/pages/llms.txt.ts  <- llms.txt for AI agents
+src/components/        <- nav, footer, sample card
+src/styles/global.css  <- design system (light/dark themes)
+public/samples/        <- PDF versions of samples
 ```
+
+## Design notes
+
+- Type: Instrument Serif (display), Atkinson Hyperlegible (body), JetBrains Mono (labels/code)
+- Light "paper & ink" theme and dark "dusk & ember" theme; toggle in the nav, respects `prefers-color-scheme`
+- No JavaScript frameworks, no analytics, no cookies

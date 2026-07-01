@@ -1,0 +1,51 @@
+---
+---
+
+<nav class="nav" aria-label="Main">
+  <a href="/" class="nav-logo">Zain Haq</a>
+  <div class="nav-right">
+    <div class="nav-links">
+      <a href="/#work" class="nav-link">Work</a>
+      <a href="/#approach" class="nav-link">Approach</a>
+      <a href="/#about" class="nav-link">About</a>
+      <a href="/#contact" class="nav-link">Contact</a>
+    </div>
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle color theme">
+      <svg
+        class="icon-sun"
+        width="16"
+        height="16"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        aria-hidden="true"
+      >
+        <circle cx="12" cy="12" r="4.5"></circle>
+        <path
+          d="M12 2v2.5M12 19.5V22M22 12h-2.5M4.5 12H2M19.1 4.9l-1.8 1.8M6.7 17.3l-1.8 1.8M19.1 19.1l-1.8-1.8M6.7 6.7L4.9 4.9"
+        ></path>
+      </svg>
+      <svg
+        class="icon-moon"
+        width="16"
+        height="16"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        aria-hidden="true"
+      >
+        <path d="M21 14.2A8.7 8.7 0 0 1 9.8 3 9 9 0 1 0 21 14.2Z"></path>
+      </svg>
+    </button>
+  </div>
+</nav>
+
+<script>
+  const toggle = document.getElementById('theme-toggle');
+  toggle?.addEventListener('click', () => {
+    const next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+    document.documentElement.dataset.theme = next;
+    localStorage.setItem('theme', next);
+  });
+</script>

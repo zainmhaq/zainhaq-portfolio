@@ -1,130 +1,269 @@
 ---
+import { getCollection } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
-import samples from '../data/samples.json';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import SampleCard from '../components/SampleCard.astro';
+
+const TOOL_POST_ID = 'ai-documentation-quality-scoring-tool-social-post';
+
+const samples = (await getCollection('samples')).sort((a, b) => a.data.order - b.data.order);
+const docSamples = samples.filter((s) => s.id !== TOOL_POST_ID);
+const toolPost = samples.find((s) => s.id === TOOL_POST_ID);
+
+const readingMinutes = (body: string | undefined) =>
+  Math.max(1, Math.round((body ?? '').trim().split(/\s+/).length / 220));
 ---
 
-<Layout title="Zain Haq — Technical Writer">
-  <!-- Nav -->
-  <nav class="nav">
-    <a href="#top" class="nav-logo">ZH</a>
-    <div class="nav-links">
-      <a href="#writing" class="nav-link">Writing</a>
-      <a href="#about" class="nav-link">About</a>
-      <a href="#contact" class="nav-link">Contact</a>
-    </div>
-  </nav>
+<Layout
+  title="Zain Haq — Technical Writer"
+  description="Zain Haq is a technical writer at Amazon Supply Chain Services. API documentation, developer guides, and AI tooling that keeps docs accurate — for human readers and AI agents."
+  path="/"
+>
+  <Nav />
 
-  <!-- Hero -->
-  <header id="top" class="hero">
-    <div class="hero-inner">
-      <h1 class="hero-title">Zain Haq</h1>
-      <p class="hero-subtitle">Technical Writer</p>
-      <p class="hero-sub">
-        I write API docs and developer guides, and build AI
-        tools that keep them accurate. Working on Amazon
-        Supply Chain Services.
-      </p>
-      <div class="hero-divider"></div>
-    </div>
-  </header>
+  <main id="main">
+    <!-- Hero -->
+    <header id="top" class="hero">
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <p class="hero-kicker">Technical writer · Seattle, WA</p>
+          <h1 class="hero-title">
+            Developer docs people trust — <em>and machines can use.</em>
+          </h1>
+          <p class="hero-sub">
+            I'm Zain Haq, a technical writer at Amazon Supply Chain Services. For seven-plus
+            years I've documented APIs, developer tools, and cloud platforms. Lately I also
+            build AI tooling that keeps documentation accurate — because docs now serve two
+            audiences: the developer reading the page, and the AI agent acting on it.
+          </p>
+          <div class="hero-actions">
+            <a href="#work" class="button button-primary">Read my work</a>
+            <a href="#approach" class="button">How I work</a>
+          </div>
+        </div>
+        <aside class="hero-file" aria-label="Profile summary">
+          <div class="hero-file-tab">zain-haq.md</div>
+          <pre class="hero-file-body"><code
+>---
+role:      technical writer
+employer:  amazon · supply chain services
+previously: h2o.ai · 5 yrs, docs platform lead
+focus:
+  - api documentation
+  - developer guides
+  - ai tooling for docs quality
+writes_for: [humans, agents]
+status:    open to interesting problems
+---</code></pre>
+        </aside>
+      </div>
+    </header>
 
-  <!-- Writing samples -->
-  <section id="writing" class="section">
-    <div class="section-inner">
-      <p class="section-label">Selected work</p>
-      <h2 class="section-title">Writing samples</h2>
-      <div class="samples-grid">
-        {samples.map((sample) => (
-          <a href={`/samples/${sample.file}`} target="_blank" rel="noopener noreferrer" class="card">
-            <div class="card-top">
-              <span class="card-type">{sample.type}</span>
-              <span class="card-audience">{sample.audience}</span>
+    <!-- Writing samples -->
+    <section id="work" class="section">
+      <div class="section-inner">
+        <p class="section-kicker"><span class="section-num">01</span> Selected work</p>
+        <h2 class="section-title">Writing samples</h2>
+        <p class="section-lede">
+          Published documentation, recreated with fictional product names. Every sample is
+          readable in the browser, downloadable as a PDF, and — true to how I work —
+          <a href="/llms.txt">available as raw Markdown</a> for the machines.
+        </p>
+        <div class="samples-grid">
+          {
+            docSamples.map((sample) => (
+              <SampleCard
+                href={`/work/${sample.id}/`}
+                title={sample.data.title}
+                docType={sample.data.docType}
+                summary={sample.data.summary}
+                audience={sample.data.audience}
+                minutes={readingMinutes(sample.body)}
+                pdf={sample.data.pdf}
+              />
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured project -->
+    <section id="tooling" class="section section-feature">
+      <div class="section-inner">
+        <p class="section-kicker"><span class="section-num">02</span> Featured project</p>
+        <h2 class="section-title">AI-powered documentation quality scoring</h2>
+        <div class="feature-grid">
+          <div class="feature-copy">
+            <p>
+              AI made it easy for teams to produce more documentation — and harder to keep it
+              accurate and consistent. At Amazon, I built a VS Code extension that scores
+              documentation drafts out of 5, combining editorial quality with technical
+              accuracy checks against approved source material. A CLI version batch-scores web
+              pages and Word documents, so teams can see quality across an entire docs set.
+            </p>
+            <p>
+              The tool doesn't replace peer review — it gives reviewers a better starting
+              point. I calibrated it against documents I had already reviewed by hand, tuning
+              the scoring until its feedback matched what a strong reviewer would flag. And
+              because cost matters, it uses Claude selectively, reserving AI review for the
+              checks where it earns its keep.
+            </p>
+            {
+              toolPost && (
+                <a href={`/work/${toolPost.id}/`} class="feature-link">
+                  Read the public write-up <span aria-hidden="true">&rarr;</span>
+                </a>
+              )
+            }
+          </div>
+          <dl class="feature-spec">
+            <div class="spec-row">
+              <dt>Form factor</dt>
+              <dd>VS Code extension + CLI</dd>
             </div>
-            <h3 class="card-title">{sample.title}</h3>
-            <p class="card-desc">{sample.description}</p>
-            <div class="card-footer">
-              <span class="view-link">
-                View PDF <span class="arrow">&#8599;</span>
-              </span>
+            <div class="spec-row">
+              <dt>Model</dt>
+              <dd>Claude Sonnet, used selectively</dd>
             </div>
+            <div class="spec-row">
+              <dt>Output</dt>
+              <dd>Score out of 5, with the issues behind it</dd>
+            </div>
+            <div class="spec-row">
+              <dt>Calibration</dt>
+              <dd>Tuned against hand-reviewed documents</dd>
+            </div>
+            <div class="spec-row">
+              <dt>Philosophy</dt>
+              <dd>Human in the loop — AI assists review, writers own judgment</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- Approach -->
+    <section id="approach" class="section">
+      <div class="section-inner">
+        <p class="section-kicker"><span class="section-num">03</span> Approach</p>
+        <h2 class="section-title">How I work</h2>
+        <div class="approach-grid">
+          <div class="approach-item">
+            <p class="approach-num">01</p>
+            <h3 class="approach-title">Test first, write second</h3>
+            <p class="approach-desc">
+              I test the product hands-on and read the source when the spec is ambiguous.
+              Claims in my docs are verified, not transcribed — and engineers get feedback
+              they can act on.
+            </p>
+          </div>
+          <div class="approach-item">
+            <p class="approach-num">02</p>
+            <h3 class="approach-title">Docs are code</h3>
+            <p class="approach-desc">
+              Content lives in version control and ships through review and CI, with the same
+              rigor as the product. I led H2O.ai's docs migration to Docusaurus and wired the
+              pipelines into CI/CD. This site works the same way: Markdown in, static site out.
+            </p>
+          </div>
+          <div class="approach-item">
+            <p class="approach-num">03</p>
+            <h3 class="approach-title">Write for humans and machines</h3>
+            <p class="approach-desc">
+              Documentation now has two audiences. Consistent terminology, exact headings, and
+              clean structure aren't just style — they're retrieval accuracy for the AI agents
+              reading alongside your users. Every sample here ships a Markdown twin, and the
+              site publishes <a href="/llms.txt">llms.txt</a>.
+            </p>
+          </div>
+          <div class="approach-item">
+            <p class="approach-num">04</p>
+            <h3 class="approach-title">AI raises the floor, writers set the bar</h3>
+            <p class="approach-desc">
+              I build AI tooling that catches inconsistencies before review instead of after.
+              The judgment calls — what to cover, what to cut, what the reader actually needs —
+              stay human.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section section-alt">
+      <div class="section-inner">
+        <p class="section-kicker"><span class="section-num">04</span> Background</p>
+        <h2 class="section-title">About</h2>
+        <div class="about-content">
+          <div>
+            <p class="about-paragraph">
+              I'm a technical writer with over seven years of experience documenting APIs,
+              developer tools, and cloud infrastructure. I currently work at Amazon, where I
+              write documentation for Amazon Supply Chain Services and build tools that
+              improve content quality across the team's docs — most recently the AI-powered
+              quality scoring tool featured above.
+            </p>
+            <p class="about-paragraph">
+              Before Amazon, I spent five years at H2O.ai documenting machine learning
+              platforms. I led the team's documentation platform migration to Docusaurus and
+              integrated docs pipelines with CI/CD tooling — work that shaped how I operate
+              now: docs as code, reviewed and shipped with the same rigor as the product.
+            </p>
+            <p class="about-paragraph">
+              Teams I work with get a writer who tests the product hands-on and reads the
+              source when the spec is ambiguous. Clear, accurate content structured around
+              real use cases is the goal, and I take ownership of getting it there.
+            </p>
+          </div>
+          <div class="about-sidebar">
+            <div class="about-block">
+              <p class="about-block-label">Currently</p>
+              <p class="about-block-value">Technical Writer, Amazon<br />Supply Chain Services</p>
+            </div>
+            <div class="about-block">
+              <p class="about-block-label">Previously</p>
+              <p class="about-block-value">Senior Technical Writer, H2O.ai</p>
+            </div>
+            <div class="about-block">
+              <p class="about-block-label">Education</p>
+              <p class="about-block-value">B.A. English Studies,<br />Northern Illinois University</p>
+            </div>
+            <div class="about-block">
+              <p class="about-block-label">Location</p>
+              <p class="about-block-value">Seattle, WA</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <div class="section-inner">
+        <p class="section-kicker"><span class="section-num">05</span> Get in touch</p>
+        <h2 class="section-title">Contact</h2>
+        <p class="section-lede">
+          Have an interesting documentation problem? I'd like to hear about it.
+        </p>
+        <div class="contact-grid">
+          <a href="mailto:zain.m.haq@gmail.com" class="contact-card">
+            <span class="contact-label">Email</span>
+            <span class="contact-value">zain.m.haq@gmail.com</span>
           </a>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <!-- About -->
-  <section id="about" class="section-alt">
-    <div class="section-inner">
-      <p class="section-label">Background</p>
-      <h2 class="section-title">About</h2>
-      <div class="about-content">
-        <div>
-          <p class="about-paragraph">
-            I'm a technical writer with over seven years of experience
-            documenting APIs, developer tools, and cloud infrastructure. I
-            currently work at Amazon, where I write documentation for
-            Amazon Supply Chain Services and build tools to improve
-            content quality across the team's docs. Most recently, I built
-            a VS Code extension that scores documentation drafts on
-            technical, editorial, and stylistic accuracy and checks them
-            against existing internal and public-facing content. Writers
-            catch inconsistencies before review instead of after.
-          </p>
-          <p class="about-paragraph">
-            Before Amazon, I spent five years at H2O.ai documenting
-            machine learning platforms. I led the team's documentation
-            platform migration to Docusaurus and integrated docs pipelines
-            with CI/CD tooling, work that shaped how I operate now: docs
-            as code, reviewed and shipped with the same rigor as the
-            product.
-          </p>
-          <p class="about-paragraph">
-            Teams I work with get a writer who tests the product hands-on
-            and reads the source when the spec is ambiguous. I give
-            engineers and product managers documentation feedback they can
-            act on. Clear, accurate content structured around real use
-            cases is the goal, and I take ownership of getting it there.
-          </p>
-        </div>
-        <div class="about-sidebar">
-          <div class="about-block">
-            <p class="about-block-label">Currently</p>
-            <p class="about-block-value">Technical Writer, Amazon</p>
-          </div>
-          <div class="about-block">
-            <p class="about-block-label">Education</p>
-            <p class="about-block-value">B.A. English Studies, Northern Illinois University</p>
-          </div>
-          <div class="about-block">
-            <p class="about-block-label">Location</p>
-            <p class="about-block-value">Seattle, WA</p>
-          </div>
+          <a
+            href="https://linkedin.com/in/zain-haq"
+            class="contact-card"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="contact-label">LinkedIn</span>
+            <span class="contact-value">linkedin.com/in/zain-haq</span>
+          </a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <!-- Contact -->
-  <section id="contact" class="section">
-    <div class="section-inner">
-      <p class="section-label">Get in touch</p>
-      <h2 class="section-title">Contact</h2>
-      <div class="contact-grid">
-        <a href="mailto:zain.m.haq@gmail.com" class="contact-card">
-          <span class="contact-label">Email</span>
-          <span class="contact-value">zain.m.haq@gmail.com</span>
-        </a>
-        <a href="https://linkedin.com/in/zain-haq" class="contact-card">
-          <span class="contact-label">LinkedIn</span>
-          <span class="contact-value">linkedin.com/in/zain-haq</span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <p>&copy; 2026 Zain Haq</p>
-  </footer>
+  <Footer />
 </Layout>

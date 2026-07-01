@@ -1,0 +1,114 @@
+---
+import { getCollection, render } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+
+export async function getStaticPaths() {
+  const samples = await getCollection('samples');
+  return samples.map((sample) => ({ params: { slug: sample.id }, props: { sample } }));
+}
+
+const { sample } = Astro.props;
+const { Content, headings } = await render(sample);
+
+const all = (await getCollection('samples')).sort((a, b) => a.data.order - b.data.order);
+const index = all.findIndex((s) => s.id === sample.id);
+const prev = index > 0 ? all[index - 1] : undefined;
+const next = index < all.length - 1 ? all[index + 1] : undefined;
+
+const words = (sample.body ?? '').trim().split(/\s+/).length;
+const minutes = Math.max(1, Math.round(words / 220));
+const toc = headings.filter((h) => h.depth === 2);
+---
+
+<Layout
+  title={`${sample.data.title} — Zain Haq`}
+  description={sample.data.summary}
+  path={`/work/${sample.id}/`}
+  ogType="article"
+>
+  <Nav />
+
+  <main id="main" class="sample-main">
+    <header class="sample-header">
+      <div class="sample-header-inner">
+        <a href="/#work" class="crumb"><span aria-hidden="true">&larr;</span> All writing samples</a>
+        <p class="sample-kicker">{sample.data.docType}</p>
+        <h1 class="sample-title">{sample.data.title}</h1>
+        <p class="sample-lede">{sample.data.purpose}</p>
+        <dl class="sample-facts">
+          <div class="fact">
+            <dt>Audience</dt>
+            <dd>{sample.data.audience}</dd>
+          </div>
+          <div class="fact">
+            <dt>Length</dt>
+            <dd>{minutes} min read</dd>
+          </div>
+          <div class="fact">
+            <dt>Formats</dt>
+            <dd>
+              HTML · <a href={`/samples/${sample.data.pdf}`} target="_blank" rel="noopener noreferrer">PDF</a> ·
+              <a href={`/work/${sample.id}.md`}>Markdown</a>
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </header>
+
+    <div class="sample-body">
+      <article class="prose">
+        <Content />
+      </article>
+
+      <aside class="sample-aside">
+        <div class="aside-panel">
+          <p class="aside-label">About this sample</p>
+          <p class="aside-note">{sample.data.note}</p>
+          <p class="aside-label">What to look for</p>
+          <ul class="aside-highlights">
+            {sample.data.highlights.map((h) => <li>{h}</li>)}
+          </ul>
+        </div>
+        {
+          toc.length > 1 && (
+            <nav class="toc" aria-label="On this page">
+              <p class="aside-label">On this page</p>
+              <ul>
+                {toc.map((h) => (
+                  <li>
+                    <a href={`#${h.slug}`}>{h.text}</a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          )
+        }
+      </aside>
+    </div>
+
+    <nav class="sample-pager" aria-label="More samples">
+      {
+        prev ? (
+          <a href={`/work/${prev.id}/`} class="pager-link pager-prev">
+            <span class="pager-dir"><span aria-hidden="true">&larr;</span> Previous</span>
+            <span class="pager-title">{prev.data.title}</span>
+          </a>
+        ) : (
+          <span />
+        )
+      }
+      {
+        next && (
+          <a href={`/work/${next.id}/`} class="pager-link pager-next">
+            <span class="pager-dir">Next <span aria-hidden="true">&rarr;</span></span>
+            <span class="pager-title">{next.data.title}</span>
+          </a>
+        )
+      }
+    </nav>
+  </main>
+
+  <Footer />
+</Layout>

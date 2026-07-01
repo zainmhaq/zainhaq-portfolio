@@ -4,16 +4,16 @@
 --------------------------------------------------------------------------- */
 
 :root {
-  --font-serif: 'Instrument Serif', Georgia, 'Times New Roman', serif;
-  --font-body: 'Atkinson Hyperlegible', -apple-system, 'Segoe UI', sans-serif;
-  --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+  --font-serif: 'Fraunces Variable', Georgia, 'Times New Roman', serif;
+  --font-body: 'Atkinson Hyperlegible Next Variable', -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono Variable', ui-monospace, 'SF Mono', Menlo, monospace;
 
   --bg: #faf6f0;
   --bg-raised: #fffdf8;
   --bg-inset: #f1eadf;
   --ink: #1c1917;
   --ink-soft: #57504a;
-  --ink-faint: #8a8178;
+  --ink-faint: #6e645a;
   --line: #e4dbca;
   --line-soft: #ece4d6;
   --accent: #bc4b24;
@@ -29,7 +29,7 @@
   --bg-inset: #272019;
   --ink: #ece4d8;
   --ink-soft: #b5aa9d;
-  --ink-faint: #857b6f;
+  --ink-faint: #9a8f82;
   --line: #332b22;
   --line-soft: #2a231b;
   --accent: #ff8f5e;
@@ -80,6 +80,19 @@ body {
   background: var(--bg);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+}
+
+/* Fraunces carries an optical-size axis; let the browser tune it per size. */
+h1,
+h2,
+h3,
+.nav-logo,
+.pager-title {
+  font-optical-sizing: auto;
+}
+
+p {
+  text-wrap: pretty;
 }
 
 ::selection {
@@ -137,7 +150,8 @@ a {
 
 .nav-logo {
   font-family: var(--font-serif);
-  font-size: 22px;
+  font-size: 21px;
+  font-weight: 500;
   letter-spacing: 0.01em;
 }
 
@@ -242,10 +256,10 @@ a {
 
 .hero-title {
   font-family: var(--font-serif);
-  font-size: clamp(40px, 6vw, 64px);
-  font-weight: 400;
+  font-size: clamp(38px, 5.6vw, 60px);
+  font-weight: 430;
   line-height: 1.08;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.015em;
   margin-bottom: 26px;
   text-wrap: balance;
 }
@@ -376,9 +390,10 @@ a {
 
 .section-title {
   font-family: var(--font-serif);
-  font-size: clamp(32px, 4.2vw, 44px);
-  font-weight: 400;
+  font-size: clamp(30px, 4vw, 40px);
+  font-weight: 440;
   line-height: 1.15;
+  letter-spacing: -0.01em;
   margin-bottom: 20px;
 }
 
@@ -458,9 +473,9 @@ a {
 
 .card-title {
   font-family: var(--font-serif);
-  font-size: 23px;
-  font-weight: 400;
-  line-height: 1.25;
+  font-size: 21px;
+  font-weight: 500;
+  line-height: 1.3;
   margin-bottom: 12px;
 }
 
@@ -631,8 +646,8 @@ a {
 
 .approach-title {
   font-family: var(--font-serif);
-  font-size: 24px;
-  font-weight: 400;
+  font-size: 22px;
+  font-weight: 500;
   margin-bottom: 10px;
 }
 
@@ -811,9 +826,10 @@ a {
 
 .sample-title {
   font-family: var(--font-serif);
-  font-size: clamp(32px, 4.6vw, 50px);
-  font-weight: 400;
+  font-size: clamp(30px, 4.2vw, 46px);
+  font-weight: 430;
   line-height: 1.12;
+  letter-spacing: -0.01em;
   max-width: 26ch;
   text-wrap: balance;
   margin-bottom: 18px;
@@ -989,7 +1005,8 @@ a {
 
 .pager-title {
   font-family: var(--font-serif);
-  font-size: 18px;
+  font-size: 17px;
+  font-weight: 500;
   line-height: 1.3;
 }
 
@@ -1005,6 +1022,16 @@ a {
   font-size: 16px;
   line-height: 1.75;
   color: var(--ink-soft);
+}
+
+/* Cap running text near the readable 75-character measure while letting
+   tables and code blocks use the full column. (em, not ch — Atkinson's
+   extra-wide zero makes ch overshoot.) */
+.prose p,
+.prose ul,
+.prose ol,
+.prose blockquote {
+  max-width: 39em;
 }
 
 .prose > :first-child {
@@ -1033,8 +1060,8 @@ a {
 
 .prose h2 {
   font-family: var(--font-serif);
-  font-size: 29px;
-  font-weight: 400;
+  font-size: 27px;
+  font-weight: 470;
   line-height: 1.2;
   color: var(--ink);
   border-top: 1px solid var(--line);
@@ -1044,8 +1071,8 @@ a {
 
 .prose h3 {
   font-family: var(--font-serif);
-  font-size: 22.5px;
-  font-weight: 400;
+  font-size: 21px;
+  font-weight: 520;
   line-height: 1.25;
   color: var(--ink);
   margin: 34px 0 12px;

@@ -56,6 +56,6 @@ public/samples/        <- PDF versions of samples
 
 ## Design notes
 
-- Type: Instrument Serif (display), Atkinson Hyperlegible (body), JetBrains Mono (labels/code)
+- Type: Fraunces (display), Atkinson Hyperlegible Next (body), JetBrains Mono (labels/code) — variable fonts, self-hosted via Fontsource
 - Light "paper & ink" theme and dark "dusk & ember" theme; toggle in the nav, respects `prefers-color-scheme`
 - No JavaScript frameworks, no analytics, no cookies

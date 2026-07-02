@@ -1,14 +1,14 @@
 ---
 title: "AI-powered documentation quality scoring tool: social media post"
-summary: A concise, public-facing explanation of an internal AI documentation tool — the problem, the design choices, and the human-in-the-loop philosophy behind it.
+summary: "A concise, public-facing explanation of an internal AI documentation tool: the problem, the design choices, and the philosophy behind it."
 docType: Social media post
 audience: Hiring managers, content leads, and technical writing teams
-purpose: Shows how I explain a technical content tooling project in a concise, public-facing format.
-note: This is a portfolio writing sample based on an internal documentation tooling project.
+purpose: Shows how I explain an internal documentation tool in a concise, public-facing format.
+note: This is a portfolio writing sample based on an internal documentation tool I built.
 highlights:
   - Translates an internal tool into audience-aware public writing
-  - Explains design trade-offs — selective AI use, cost, calibration against human review
-  - Positions AI as a review aid, not a replacement for editorial judgment
+  - "Explains design trade-offs: selective AI use, cost, calibration against human review"
+  - Presents AI as a review aid rather than a replacement for editorial judgment
 pdf: ai-documentation-quality-scoring-tool-social-post.pdf
 order: 4
 ---

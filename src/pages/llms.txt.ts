@@ -8,13 +8,14 @@ export const GET: APIRoute = async ({ site }) => {
   const samples = (await getCollection('samples')).sort((a, b) => a.data.order - b.data.order);
 
   const lines = [
-    '# Zain Haq — Technical Writer',
+    '# Zain Haq · Technical Writer',
     '',
-    '> Portfolio of Zain Haq, a technical writer at Amazon Supply Chain Services with 7+ years',
-    '> of experience documenting APIs, developer tools, and cloud platforms. He also builds AI',
-    '> tooling for documentation quality, including a VS Code extension and CLI that score docs',
-    '> drafts for editorial and technical accuracy. Previously led the docs platform migration',
-    '> to Docusaurus at H2O.ai. Based in Seattle, WA. Contact: zain.m.haq@gmail.com.',
+    '> Portfolio of Zain Haq, a technical writer at Amazon Supply Chain Services with more than',
+    '> seven years of experience documenting APIs, developer tools, and cloud platforms. He also',
+    '> builds AI tools for documentation quality, including a VS Code extension and CLI that',
+    '> score documentation drafts for editorial quality and technical accuracy. He previously led',
+    '> the docs platform migration to Docusaurus at H2O.ai. Based in Seattle, WA. Contact:',
+    '> zain.m.haq@gmail.com.',
     '',
     'Writing samples use fictional company and product names; the technical content is',
     'representative of published documentation. Each sample is available as raw Markdown.',

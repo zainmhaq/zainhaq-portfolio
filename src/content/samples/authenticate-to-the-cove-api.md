@@ -1,13 +1,13 @@
 ---
 title: Authenticate to the Cove API
-summary: How to generate API credentials, exchange them for OAuth 2.0 access tokens, and store both securely — with caching strategies and error references.
+summary: How to generate API credentials, exchange them for OAuth 2.0 access tokens, and store both securely, with caching strategies and error references.
 docType: API authentication guide
 audience: Merchant and agency developers
 purpose: Describes how to generate API credentials, exchange them for OAuth 2.0 access tokens, and store both securely.
 note: Company, product, and endpoint names are fictional. The technical content is representative of the published version.
 highlights:
   - Task-based structure that layers concepts before procedures
-  - Security guidance beyond the happy path — least privilege, caching, encryption, credential rotation
+  - "Security guidance beyond the happy path: least privilege, caching, encryption, credential rotation"
   - Request and response references with error codes, in four languages
 pdf: authenticate-to-the-cove-api.pdf
 order: 1

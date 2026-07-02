@@ -16,8 +16,8 @@ const readingMinutes = (body: string | undefined) =>
 ---
 
 <Layout
-  title="Zain Haq — Technical Writer"
-  description="Zain Haq is a technical writer at Amazon Supply Chain Services. API documentation, developer guides, and AI tooling that keeps docs accurate — for human readers and AI agents."
+  title="Zain Haq · Technical Writer"
+  description="Zain Haq is a technical writer at Amazon Supply Chain Services. He writes API documentation and developer guides, and he builds AI tools that keep documentation accurate for readers and AI agents."
   path="/"
 >
   <Nav />
@@ -29,13 +29,13 @@ const readingMinutes = (body: string | undefined) =>
         <div class="hero-copy">
           <p class="hero-kicker">Technical writer · Seattle, WA</p>
           <h1 class="hero-title">
-            Developer docs people trust — <em>and machines can use.</em>
+            Developer docs people trust <em>and machines can use.</em>
           </h1>
           <p class="hero-sub">
-            I'm Zain Haq, a technical writer at Amazon Supply Chain Services. For seven-plus
-            years I've documented APIs, developer tools, and cloud platforms. Lately I also
-            build AI tooling that keeps documentation accurate — because docs now serve two
-            audiences: the developer reading the page, and the AI agent acting on it.
+            I'm Zain Haq, a technical writer at Amazon Supply Chain Services. I've documented
+            APIs, developer tools, and cloud platforms for more than seven years. I also build
+            AI tools that keep documentation accurate, because a growing share of
+            documentation's readers are now AI agents that act on what the page says.
           </p>
           <div class="hero-actions">
             <a href="#work" class="button button-primary">Read my work</a>
@@ -52,7 +52,7 @@ previously: h2o.ai · 5 yrs, docs platform lead
 focus:
   - api documentation
   - developer guides
-  - ai tooling for docs quality
+  - ai tools for docs quality
 writes_for: [humans, agents]
 status:    open to interesting problems
 ---</code></pre>
@@ -66,9 +66,9 @@ status:    open to interesting problems
         <p class="section-kicker"><span class="section-num">01</span> Selected work</p>
         <h2 class="section-title">Writing samples</h2>
         <p class="section-lede">
-          Published documentation, recreated with fictional product names. Every sample is
-          readable in the browser, downloadable as a PDF, and — true to how I work —
-          <a href="/llms.txt">available as raw Markdown</a> for the machines.
+          These are published documents, recreated with fictional product names. You can read
+          each sample in the browser, download it as a PDF, or fetch it as
+          <a href="/llms.txt">raw Markdown</a>.
         </p>
         <div class="samples-grid">
           {
@@ -89,25 +89,27 @@ status:    open to interesting problems
     </section>
 
     <!-- Featured project -->
-    <section id="tooling" class="section section-feature">
+    <section id="project" class="section section-feature">
       <div class="section-inner">
         <p class="section-kicker"><span class="section-num">02</span> Featured project</p>
         <h2 class="section-title">AI-powered documentation quality scoring</h2>
         <div class="feature-grid">
           <div class="feature-copy">
             <p>
-              AI made it easy for teams to produce more documentation — and harder to keep it
-              accurate and consistent. At Amazon, I built a VS Code extension that scores
-              documentation drafts out of 5, combining editorial quality with technical
-              accuracy checks against approved source material. A CLI version batch-scores web
-              pages and Word documents, so teams can see quality across an entire docs set.
+              AI helps teams produce more documentation, and more drafts mean more small
+              errors for reviewers to catch. At Amazon, I built a VS Code extension that
+              scores a documentation draft out of 5. The score combines editorial quality
+              with technical accuracy checks against approved source material. A companion
+              CLI scores web pages and Word documents in batches, so a team can measure
+              quality across its entire library.
             </p>
             <p>
-              The tool doesn't replace peer review — it gives reviewers a better starting
-              point. I calibrated it against documents I had already reviewed by hand, tuning
-              the scoring until its feedback matched what a strong reviewer would flag. And
-              because cost matters, it uses Claude selectively, reserving AI review for the
-              checks where it earns its keep.
+              The tool gives reviewers a better starting point rather than replacing peer
+              review. I calibrated it against documents I had already reviewed by hand and
+              adjusted the scoring until its feedback matched what a strong reviewer would
+              flag. To control costs, it reserves Claude for the checks that need judgment
+              and leaves the rest to rule-based checks. I built it around the team's review
+              process rather than my own habits.
             </p>
             {
               toolPost && (
@@ -136,7 +138,7 @@ status:    open to interesting problems
             </div>
             <div class="spec-row">
               <dt>Philosophy</dt>
-              <dd>Human in the loop — AI assists review, writers own judgment</dd>
+              <dd>Human in the loop. AI assists review; writers decide.</dd>
             </div>
           </dl>
         </div>
@@ -153,37 +155,39 @@ status:    open to interesting problems
             <p class="approach-num">01</p>
             <h3 class="approach-title">Test first, write second</h3>
             <p class="approach-desc">
-              I test the product hands-on and read the source when the spec is ambiguous.
-              Claims in my docs are verified, not transcribed — and engineers get feedback
-              they can act on.
+              I test the product hands-on and read the source code when the spec is
+              ambiguous. A claim doesn't go into the docs until I've seen it work.
             </p>
           </div>
           <div class="approach-item">
             <p class="approach-num">02</p>
             <h3 class="approach-title">Docs are code</h3>
             <p class="approach-desc">
-              Content lives in version control and ships through review and CI, with the same
-              rigor as the product. I led H2O.ai's docs migration to Docusaurus and wired the
-              pipelines into CI/CD. This site works the same way: Markdown in, static site out.
+              Content lives in Git and ships through review and CI, like the product it
+              documents. At H2O.ai, I owned the publishing pipeline: I led the docs migration
+              to Docusaurus and connected the build to CI/CD. This site works the same way:
+              every sample is a Markdown file that builds into the page you're reading.
             </p>
           </div>
           <div class="approach-item">
             <p class="approach-num">03</p>
             <h3 class="approach-title">Write for humans and machines</h3>
             <p class="approach-desc">
-              Documentation now has two audiences. Consistent terminology, exact headings, and
-              clean structure aren't just style — they're retrieval accuracy for the AI agents
-              reading alongside your users. Every sample here ships a Markdown twin, and the
-              site publishes <a href="/llms.txt">llms.txt</a>.
+              Documentation now has two audiences. When terminology stays consistent and
+              headings stay exact, AI agents and retrieval systems surface the right answer
+              for your users. Every sample here has a Markdown twin, and the site publishes
+              <a href="/llms.txt">llms.txt</a>. The same structure makes content work with
+              retrieval-augmented generation (RAG) and Model Context Protocol (MCP) servers.
             </p>
           </div>
           <div class="approach-item">
             <p class="approach-num">04</p>
-            <h3 class="approach-title">AI raises the floor, writers set the bar</h3>
+            <h3 class="approach-title">Give AI a map</h3>
             <p class="approach-desc">
-              I build AI tooling that catches inconsistencies before review instead of after.
-              The judgment calls — what to cover, what to cut, what the reader actually needs —
-              stay human.
+              A model assembles what already exists. Deciding what's worth building still
+              takes a writer who knows the product and the reader. When a model drafts for
+              me, I expect most of it to be sound, verify it with automatic checks, and
+              review the result the way I'd review a colleague's draft.
             </p>
           </div>
         </div>
@@ -198,22 +202,23 @@ status:    open to interesting problems
         <div class="about-content">
           <div>
             <p class="about-paragraph">
-              I'm a technical writer with over seven years of experience documenting APIs,
-              developer tools, and cloud infrastructure. I currently work at Amazon, where I
+              I'm a technical writer with more than seven years of experience documenting
+              APIs, developer tools, and cloud infrastructure. The job now has two sides, and
+              I work both: writing the explanations that show how a product fits together,
+              and building the systems that produce and check content with AI. At Amazon, I
               write documentation for Amazon Supply Chain Services and build tools that
-              improve content quality across the team's docs — most recently the AI-powered
-              quality scoring tool featured above.
+              improve content quality across the team's docs, including the AI scoring tool
+              featured above.
             </p>
             <p class="about-paragraph">
               Before Amazon, I spent five years at H2O.ai documenting machine learning
-              platforms. I led the team's documentation platform migration to Docusaurus and
-              integrated docs pipelines with CI/CD tooling — work that shaped how I operate
-              now: docs as code, reviewed and shipped with the same rigor as the product.
+              platforms and running the team's documentation platform. Owning a publishing
+              system end to end, from Git to the published page, still shapes how I write.
             </p>
             <p class="about-paragraph">
-              Teams I work with get a writer who tests the product hands-on and reads the
-              source when the spec is ambiguous. Clear, accurate content structured around
-              real use cases is the goal, and I take ownership of getting it there.
+              Teams that work with me get direct questions and documentation feedback that
+              engineers can act on. The goal is clear, accurate content organized around how
+              people actually use the product.
             </p>
           </div>
           <div class="about-sidebar">

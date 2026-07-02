@@ -6,9 +6,9 @@ audience: Enterprise architects and OMS developers
 purpose: Describes the architecture, modules, and deployment of a pre-built integration between an enterprise order management system (OMS) and a commerce and fulfillment platform.
 note: Company, product, and platform names are fictional. The technical content is representative of the published version.
 highlights:
-  - Layered explanation — principles and architecture before module-level detail
+  - "Layered explanation: principles and architecture before module-level detail"
   - Consistent API and event reference tables across eight integration modules
-  - Serves two audiences at once — architects evaluating fit and developers implementing it
+  - "Serves two audiences at once: architects evaluating fit and developers implementing it"
 pdf: cove-commerce-accelerator-for-meridian-oms.pdf
 order: 2
 ---

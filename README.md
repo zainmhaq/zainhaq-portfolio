@@ -57,5 +57,6 @@ public/samples/        <- PDF versions of samples
 ## Design notes
 
 - Type: Fraunces (display), Atkinson Hyperlegible Next (body), JetBrains Mono (labels/code) — variable fonts, self-hosted via Fontsource
-- Light "paper & ink" theme and dark "dusk & ember" theme; toggle in the nav, respects `prefers-color-scheme`
+- Light "paper & ink" theme and a dark "dusk" theme, sharing a forest-green accent (OKLCH hue 155); toggle in the nav, respects `prefers-color-scheme`
+- Favicon: a rubricated pilcrow (the paragraph mark, drawn in red as medieval rubricators did), as SVG plus generated `favicon.ico` and `apple-touch-icon.png`
 - No JavaScript frameworks, no analytics, no cookies

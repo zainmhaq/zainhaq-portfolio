@@ -1,6 +1,7 @@
 /* ---------------------------------------------------------------------------
    Design tokens
-   Warm editorial palette: paper & ink in the light, dusk & ember in the dark.
+   Warm editorial palette: paper & ink in the light, dusk in the dark,
+   with a forest-green accent in both themes.
 --------------------------------------------------------------------------- */
 
 :root {
@@ -9,9 +10,9 @@
   --font-mono: 'JetBrains Mono Variable', ui-monospace, 'SF Mono', Menlo, monospace;
 
   /* Tokens are OKLCH so the perceptual relationships stay explicit:
-     neutrals share one warm hue family (~56–89°), the accent holds a
-     constant 38.5° hue in both themes, and dark mode lowers accent
-     chroma slightly to avoid vibration. Hex equivalents in comments. */
+     neutrals share one warm hue family (~56–89°), and the forest accent
+     holds a constant 155° hue in both themes, with chroma tuned per
+     theme. Hex equivalents in comments. */
   --bg: oklch(97.5% 0.009 78); /* #faf6f0 */
   --bg-raised: oklch(99.4% 0.007 89); /* #fffdf8 */
   --bg-inset: oklch(94% 0.017 79); /* #f1eadf */
@@ -20,9 +21,9 @@
   --ink-faint: oklch(51% 0.02 67); /* #6e645a */
   --line: oklch(89.4% 0.025 83); /* #e4dbca */
   --line-soft: oklch(92.1% 0.021 82); /* #ece4d6 */
-  --accent: oklch(55.8% 0.155 38.5); /* #bc4b24 */
-  --accent-text: oklch(51% 0.145 38.5); /* #a8411c */
-  --accent-soft: oklch(55.8% 0.155 38.5 / 8%);
+  --accent: oklch(52% 0.1 155); /* #307a4f */
+  --accent-text: oklch(47% 0.09 155); /* #296944 */
+  --accent-soft: oklch(52% 0.1 155 / 8%);
 
   color-scheme: light;
 }
@@ -36,9 +37,9 @@
   --ink-faint: oklch(65.6% 0.023 72); /* #9a8f82 */
   --line: oklch(29.5% 0.02 70); /* #332b22 */
   --line-soft: oklch(26.1% 0.018 71); /* #2a231b */
-  --accent: oklch(76.2% 0.15 38.5); /* #ff8d68 */
-  --accent-text: oklch(78.2% 0.14 38.5); /* #ff9673 */
-  --accent-soft: oklch(76.2% 0.15 38.5 / 10%);
+  --accent: oklch(78% 0.12 155); /* #73ce95 */
+  --accent-text: oklch(80% 0.11 155); /* #81d39f */
+  --accent-soft: oklch(78% 0.12 155 / 10%);
 
   color-scheme: dark;
 }

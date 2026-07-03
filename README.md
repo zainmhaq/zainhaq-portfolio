@@ -57,6 +57,6 @@ public/samples/        <- PDF versions of samples
 ## Design notes
 
 - Type: Fraunces (display), Atkinson Hyperlegible Next (body), JetBrains Mono (labels/code) — variable fonts, self-hosted via Fontsource
-- Light "paper & ink" theme and a dark "dusk" theme, sharing a forest-green accent (OKLCH hue 155); toggle in the nav, respects `prefers-color-scheme`
-- Favicon: a rubricated pilcrow (the paragraph mark, drawn in red as medieval rubricators did), as SVG plus generated `favicon.ico` and `apple-touch-icon.png`
+- Light "paper & ink" theme and a dark "dusk" theme, sharing a terracotta accent modeled on Claude's brand orange (Crail, `#c15f3c`, OKLCH hue 40); applied minimally, in the spirit of claude.ai and chatgpt.com: the hero line, links, and interactive states carry color, everything else stays neutral
+- Favicon: a rubricated pilcrow (the paragraph mark, drawn in the accent terracotta as medieval rubricators drew theirs in red), as SVG plus generated `favicon.ico` and `apple-touch-icon.png`
 - No JavaScript frameworks, no analytics, no cookies

@@ -10,9 +10,10 @@
   --font-mono: 'JetBrains Mono Variable', ui-monospace, 'SF Mono', Menlo, monospace;
 
   /* Tokens are OKLCH so the perceptual relationships stay explicit:
-     neutrals share one warm hue family (~56–89°), and the forest accent
-     holds a constant 155° hue in both themes, with chroma tuned per
-     theme. Hex equivalents in comments. */
+     neutrals share one warm hue family (~56–89°), and the terracotta
+     accent (Claude's Crail, hue 40°) holds a constant hue in both
+     themes. Applied sparingly: brand moment, links, and interactive
+     states only. Hex equivalents in comments. */
   --bg: oklch(97.5% 0.009 78); /* #faf6f0 */
   --bg-raised: oklch(99.4% 0.007 89); /* #fffdf8 */
   --bg-inset: oklch(94% 0.017 79); /* #f1eadf */
@@ -21,9 +22,9 @@
   --ink-faint: oklch(51% 0.02 67); /* #6e645a */
   --line: oklch(89.4% 0.025 83); /* #e4dbca */
   --line-soft: oklch(92.1% 0.021 82); /* #ece4d6 */
-  --accent: oklch(52% 0.1 155); /* #307a4f */
-  --accent-text: oklch(47% 0.09 155); /* #296944 */
-  --accent-soft: oklch(52% 0.1 155 / 8%);
+  --accent: oklch(59.7% 0.135 40); /* #c15f3c, Crail */
+  --accent-text: oklch(51% 0.115 40); /* #9c4c2f */
+  --accent-soft: oklch(59.7% 0.135 40 / 8%);
 
   color-scheme: light;
 }
@@ -37,9 +38,9 @@
   --ink-faint: oklch(65.6% 0.023 72); /* #9a8f82 */
   --line: oklch(29.5% 0.02 70); /* #332b22 */
   --line-soft: oklch(26.1% 0.018 71); /* #2a231b */
-  --accent: oklch(78% 0.12 155); /* #73ce95 */
-  --accent-text: oklch(80% 0.11 155); /* #81d39f */
-  --accent-soft: oklch(78% 0.12 155 / 10%);
+  --accent: oklch(67% 0.13 40); /* ~#d97757, the Claude logo orange */
+  --accent-text: oklch(72% 0.105 40); /* #dd8d72 */
+  --accent-soft: oklch(67% 0.13 40 / 10%);
 
   color-scheme: dark;
 }
@@ -255,7 +256,7 @@ a {
   font-size: 13px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--accent-text);
+  color: var(--ink-faint);
   margin-bottom: 22px;
 }
 
@@ -389,7 +390,7 @@ a {
 }
 
 .section-num {
-  color: var(--accent-text);
+  color: var(--ink-faint);
   margin-right: 8px;
 }
 
@@ -463,8 +464,8 @@ a {
   font-size: 11px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: var(--accent-text);
-  background: var(--accent-soft);
+  color: var(--ink-soft);
+  background: var(--bg-inset);
   padding: 4px 10px;
   border-radius: 999px;
 }
@@ -645,7 +646,7 @@ a {
 .approach-num {
   font-family: var(--font-mono);
   font-size: 13px;
-  color: var(--accent-text);
+  color: var(--ink-faint);
   margin-bottom: 12px;
 }
 
@@ -825,7 +826,7 @@ a {
   font-size: 12px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--accent-text);
+  color: var(--ink-faint);
   margin-bottom: 14px;
 }
 
@@ -944,7 +945,7 @@ a {
   content: '·';
   position: absolute;
   left: 2px;
-  color: var(--accent-text);
+  color: var(--ink-faint);
   font-weight: 700;
 }
 
@@ -1098,7 +1099,7 @@ a {
 }
 
 .prose li::marker {
-  color: var(--accent-text);
+  color: var(--ink-faint);
   font-family: var(--font-mono);
   font-size: 0.9em;
 }

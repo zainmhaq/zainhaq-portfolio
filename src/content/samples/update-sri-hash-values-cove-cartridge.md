@@ -6,7 +6,7 @@ audience: Storefront developers
 purpose: Describes how to regenerate Subresource Integrity (SRI) hash values after changes to checkout cartridge files.
 note: Company, product, file, and path names are fictional. The technical content is representative of the published version.
 highlights:
-  - Explains the why (script-tampering protection) before the how
+  - Gives the reason for the procedure (script-tampering protection) before the steps
   - Numbered procedures with exact file paths and expected results
   - Anticipates version differences and provides a manual fallback
 pdf: update-sri-hash-values-cove-cartridge.pdf
